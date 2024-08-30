@@ -1,0 +1,129 @@
+/* cores:
+#28170D - fonte do header
+#2F2A24
+#B4AB9C - dor de fundo header, footer
+#F4F1E0 - cor do botao
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    position: absolute;
+}
+
+/* header */
+header {
+    display: flex;
+    background-color: #B4AB9C;
+    justify-content: space-around;
+    color: #28170D;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 15%;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    
+}
+
+ul {
+    display: inline;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul:hover {
+    cursor: pointer;
+    color: #F4F1E0;  
+}
+
+.btn {
+    background-color: #F4F1E0;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #28170D;
+    color: #F4F1E0;
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex: 200 1 0;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-image: url(background_clothes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;  
+    width: 100vw;
+}
+
+.card img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.card h2 {
+    background-color: #2F2A24;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #F4F1E0;
+}
+
+/* footer */
+footer {
+    background-color: #B4AB9C;
+    color: #28170D;
+    text-align: center;
+}
+/* media_query */
+
+@media screen and (max-width: 480px) {
+    main {
+        display: block;
+    }
+
+    header {
+        display: block;
+        background-color: #B4AB9C;
+        justify-content: center;
+        text-align: center;
+        color: #28170D;
+    }
+
+    nav {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        
+    }
+    
+}
