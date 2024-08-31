@@ -8,11 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    position: absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* header */
@@ -21,6 +20,7 @@ header {
     background-color: #B4AB9C;
     justify-content: space-around;
     color: #28170D;
+    padding: 10px;
 }
 
 .logo {
@@ -77,16 +77,21 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
     height: 100vh;  
     width: 100vw;
 }
 
+.card {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
 .card img {
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 .card h2 {
@@ -102,12 +107,21 @@ footer {
     background-color: #B4AB9C;
     color: #28170D;
     text-align: center;
+    padding: 20px;
 }
+
 /* media_query */
 
 @media screen and (max-width: 480px) {
+
+    body {
+        max-width: 100vh;
+    }
     main {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
     header {
@@ -124,6 +138,18 @@ footer {
         align-items: center;
         width: 50%;
         
+    }
+
+    .card {
+        margin-top: 0px;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 100px;
+        height: 130px;
+        border-radius: 10px;
+        margin: 0 auto;
     }
     
 }
